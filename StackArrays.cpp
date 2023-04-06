@@ -7,7 +7,7 @@ using namespace std;
 using namespace std::chrono;
 //Declare global array and a global variable top because there are used in multiple functions
 int top=-1;
-int arr[5];
+int arr[10];
 //Increment the value of top using a function having a reference as an argument
 void increment(int *v){
     (*v)++;
@@ -22,7 +22,7 @@ bool IsEmpty(){
 }
 //Define a function to see if the array is full
 bool isFull(){
-    if (top+1==5){
+    if (top+1==10){
         return true;
     }else{
         return false;
@@ -37,8 +37,6 @@ void push(int value){
     if(isFull()==false){
         increment(&top);
         arr[top]=value;
-        
-        cout<<value<<endl;
     }else{
         //Check if the array is full
         cout<<"Stack Overflow"<<endl;
@@ -55,7 +53,7 @@ void pop(){
 }
 //Function to display all the elements in the array
 void display(){
-    for(int i=0;i<5;i++){
+    for(int i=0;i<top+1;i++){
         cout<<arr[i]<<" ";
     }
     cout<<endl;

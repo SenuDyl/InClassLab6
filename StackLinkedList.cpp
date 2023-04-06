@@ -54,6 +54,7 @@ public:
                 cout<<ptr3->data<<" ";
                 ptr3=ptr3->link;
             }
+            cout<<endl;
         }
     }
     
